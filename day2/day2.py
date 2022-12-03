@@ -36,7 +36,7 @@ def calculate_score2(input_file):
         for line in lines:
             op_move, my_res = line.split()
             game_point = game_points[my_res]
-            move_point = 0
+
             if my_res == 'Y': # tie
                 move_point = tie_moves[op_move]
             elif my_res == 'X': # lose
