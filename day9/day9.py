@@ -1,6 +1,6 @@
 def count_tail_positions(input_file):
     tail_pos_set = set()
-    tail_pos_set.add((0, 0)) # use (0,0) to represent start
+    tail_pos_set.add((0, 0))  # use (0,0) to represent start
 
     with open(input_file) as f:
         lines = f.read().splitlines()
@@ -12,7 +12,7 @@ def count_tail_positions(input_file):
         for line in lines:
             direction, moves = line.split()
             moves = int(moves)
-            # tail_pos_set.add((t_x, t_y))
+
             match direction:
                 case 'L':
                     # -x
@@ -58,7 +58,7 @@ def count_tail_positions(input_file):
                             elif h_x < t_x:
                                 t_x -= 1
                             tail_pos_set.add((t_x, t_y))
-    print(tail_pos_set)
+
     return len(tail_pos_set)
 
 
